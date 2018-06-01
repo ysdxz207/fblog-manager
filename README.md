@@ -1,3 +1,7 @@
-**飞鸿博客后台管理系统**
+**椋為缚鍗氬鍚庡彴绠＄悊绯荤粺**
 
-基于：[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+鍩轰簬锛歔vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+
+`npm install webpack-dev-server --save-dev`
+
+`npm install cross-env --save-dev`
