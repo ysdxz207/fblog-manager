@@ -7,6 +7,17 @@ import { getToken } from '@/utils/auth'
 const service = axios.create({
   baseURL: process.env.BASE_API, // api的base_url
   timeout: 5000, // request timeout
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+    'Accept': 'application/json'
+  },
+  transformRequest: [function(data) {
+    let ret = ''
+    for (const it in data) {
+      ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+    }
+    return ret
+  }],
   withCredentials: true // 解决跨域session不一致问题
 
 })
