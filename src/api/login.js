@@ -1,9 +1,10 @@
 import request from '@/utils/request'
 
-export function loginByUsername(username, password) {
+export function loginByUsername(uname, upass, captcha) {
   const data = {
-    username,
-    password
+    uname,
+    upass,
+    captcha
   }
   console.log(data)
   return request({
