@@ -7,8 +7,7 @@ export function loginByUsername(uname, upass, captcha) {
     captcha
   }
   console.log(data)
-  return request({
-    url: '/admin/login',
+  return request('/admin/login', {
     method: 'post',
     data
   })

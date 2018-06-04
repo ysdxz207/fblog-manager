@@ -27,7 +27,7 @@
           <svg-icon icon-class="user" />
         </span>
         <el-input name="captcha" type="text" v-model="loginForm.captcha" autoComplete="on" placeholder="验证码" />
-        <img src="http://puyixiaowo.win/admin/captcha.jpg"/>
+        <img :src="BASE_API + '/admin/captcha.jpg'"/>
       </el-form-item>
 
       <el-button type="primary" style="width:100%;margin-bottom:30px;" :loading="loading" @click.native.prevent="handleLogin">{{$t('login.logIn')}}</el-button>
@@ -90,7 +90,8 @@ export default {
       },
       passwordType: 'password',
       loading: false,
-      showDialog: false
+      showDialog: false,
+      BASE_API: ''
     }
   },
   methods: {
@@ -141,6 +142,9 @@ export default {
   },
   destroyed() {
     // window.removeEventListener('hashchange', this.afterQRScan)
+  },
+  mounted() {
+    this.BASE_API = process.env.BASE_API
   }
 }
 </script>

@@ -23,7 +23,7 @@
     "url": "https://github.com/ysdxz207/fblog-manager.git"
   },
   "dependencies": {
-    "axios": "0.17.1",
+    "axios": "^0.18.0",
     "clipboard": "1.7.1",
     "codemirror": "5.32.0",
     "driver.js": "0.5.2",
